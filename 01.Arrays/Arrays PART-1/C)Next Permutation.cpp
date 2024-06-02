@@ -19,7 +19,7 @@ public:
     void nextPermutation(vector<int>& nums) {
         int n=nums.size(),
         int ind = -1;
-        //Iterating from the back and finding first element smaller than its next element, before that element all the elements from index 0 to that index will match with the next permutation.
+        /*Iterating from the back and finding first element smaller than its next element, before that element all the elements from index 0 to that index will match with the next permutation.*/
         for(int i=n-2;i>=0;i--){
             if(nums[i+1]>nums[i]){
                 ind=i;
