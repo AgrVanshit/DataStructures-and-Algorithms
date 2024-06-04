@@ -4,34 +4,34 @@
 //Bruteforce Approach:(Modifying given array)
 //T.C: O(nlogn) + O(n);
 //S.C: O(1)
-// class Solution {
-// public:
-//     int findDuplicate(vector<int>& nums) {
-//         int n = nums.size();
-//         sort(nums.begin(), nums.end());
-//         for(int i = 0; i < n-1; i++){
-//             if(nums[i] == nums[i+1]) return nums[i];
-//         }
-//         return -1;
-//     }
-// };
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
+        for(int i = 0; i < n-1; i++){
+            if(nums[i] == nums[i+1]) return nums[i];
+        }
+        return -1;
+    }
+};
 
 
 //Better Approach:
 //T.C: O(n)
 //S.C: O(n) and without modifying array.
-// class Solution {
-// public:
-//     int findDuplicate(vector<int>& nums) {
-//         int n = nums.size();
-//         unordered_map<int, int> mp;
-//         for(int i = 0; i < n; i++){
-//             mp[nums[i]]++;
-//             if(mp[nums[i]] == 2) return nums[i];
-//         }
-//         return -1;
-//     }
-// };
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int n = nums.size();
+        unordered_map<int, int> mp;
+        for(int i = 0; i < n; i++){
+            mp[nums[i]]++;
+            if(mp[nums[i]] == 2) return nums[i];
+        }
+        return -1;
+    }
+};
 
 
 //Optimised Approach:
