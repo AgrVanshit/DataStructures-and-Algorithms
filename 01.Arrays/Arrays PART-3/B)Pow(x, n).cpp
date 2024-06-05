@@ -1,22 +1,22 @@
 //*****https://leetcode.com/problems/powx-n/description/*****
 
 
-//Bruteforce Approach:(TLE)
+//Bruteforce Approach:
 //T.C: O(n);
 //S.C: O(1);
-// class Solution {
-// public:
-//     double myPow(double x, int n) {
-//         int m = n;
-//         double ans = 1;
-//         n = abs(n);
-//         for(int i = 0; i < n; i++){
-//             ans *= x;
-//         }
-//         if(m < 0) ans = 1.0/ans;
-//         return ans;
-//     }
-// };
+class Solution {
+public:
+    double myPow(double x, int n) {
+        int m = n;
+        double ans = 1;
+        n = abs(n);
+        for(int i = 0; i < n; i++){
+            ans *= x;
+        }
+        if(m < 0) return 1.0/ans;
+        return ans;
+    }
+};
 
 
 //Optimal Approach:
