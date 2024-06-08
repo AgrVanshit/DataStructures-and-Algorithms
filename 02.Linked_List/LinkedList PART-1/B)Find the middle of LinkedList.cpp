@@ -40,7 +40,8 @@ public:
 };
 
 
-//Approach 2 (Slow and Fast pointer)
+//Approach 2: (Slow and Fast pointer)
+//"Tortoise and the Hare" Algorithm.
 //Optimal Approach:
 //T.C: O(n/2);
 //S.C: O(1);
