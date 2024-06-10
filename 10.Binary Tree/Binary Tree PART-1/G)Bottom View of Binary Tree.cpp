@@ -2,8 +2,8 @@
 
 
 //Using Vertical order Traversal:
-//T.C: O(n);
-//S.C: O(n);
+//T.C: O(n*log(n));
+//S.C: O(2*n);
 class Solution {
   public:
     vector <int> bottomView(Node *root) {
@@ -11,7 +11,9 @@ class Solution {
         if(root == NULL) return ans;
         queue<pair<Node*, int>> q;
         map<int, int> mpp;
+        
         q.push({root, 0});
+
         while(!q.empty()){
             auto it = q.front();
             q.pop();
@@ -30,3 +32,8 @@ class Solution {
         return ans;
     }
 };
+
+/*This can also be done using Recursive traversal but in that case
+  we need to keep the track of level also, so it is recommended to 
+  do the iterative vertical order traversal here.
+*/
