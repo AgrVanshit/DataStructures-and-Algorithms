@@ -56,8 +56,8 @@ class Solution
                 if(root == NULL ) return ans;
                 map<int, pair<int,int> > mpp;
                 dfs(root, mpp, 0, 0);
-                for(auto x : mpp){
-                    ans.push_back(x.second.first);
+                for(auto it : mpp){
+                    ans.push_back(it.second.first);
                 }
                 return ans;
             }
