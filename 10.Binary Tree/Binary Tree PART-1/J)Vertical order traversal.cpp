@@ -14,7 +14,7 @@
  */
 
 
-//*****Iterative Approach (Levl Order Traversal)*****
+//*****Iterative Approach (Level Order Traversal)*****
 //T.C: O(n*log(n));
 //S.C: O(n);
 class Solution {
