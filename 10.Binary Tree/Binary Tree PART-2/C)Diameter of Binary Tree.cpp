@@ -14,7 +14,11 @@
  */
 
 
-//Bruteforce Approach:
+/*Bruteforce Approach:(Using preorder traversal 
+                       and whenever we reach any 
+                       node just calculating the 
+                       diameter and finding the 
+                       maximum). */
 //T.C: O(n*n);
 //S.C: O(n);
 class Solution {
