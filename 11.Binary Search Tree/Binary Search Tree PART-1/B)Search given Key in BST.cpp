@@ -30,7 +30,7 @@ public:
 
 //Iterative Approach:
 //T.C: O(log(n)) //O(n) for skew tree;
-//S.C: O(log(n)) //O(n) for skew tree;
+//S.C: O(1);
 class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
