@@ -1,8 +1,8 @@
 //*****https://leetcode.com/problems/is-graph-bipartite/description/*****
 
 
-//T.C: 3*O(n);
-//S.C: O(n) + O(2 * E);
+//T.C: O(n) + O(2 * E);
+//S.C: 2*O(n);
 class Solution {
 private:
     bool checkBipartite(int start, int n,vector<vector<int>>& graph, int color[]){
