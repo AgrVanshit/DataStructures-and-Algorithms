@@ -1,8 +1,8 @@
 //*****https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1*****
 
 
-//T.C: 3*O(n);
-//S.C: O(n) + O(2 * E); // E = no. of edges.
+//T.C: O(n) + O(2 * E);
+//S.C: 3*O(n);
 class Solution {
   private:
     void dfs(int node,vector<int> adj[], int vis[], vector<int>& ls){
