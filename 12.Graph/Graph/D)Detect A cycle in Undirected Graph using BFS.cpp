@@ -1,7 +1,7 @@
 //*****https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1*****
 
 
-//T.C: O(n) + O(2 * E);
+//T.C: O(n) + O(n + 2*E);
 //S.C: 2*O(n);
 class Solution {
   private:
@@ -45,7 +45,7 @@ class Solution {
 
 /*CONCEPT OF CHECKING IF THERE ARE MORE THAN TWO PARENT NODES FOR 
   ANY NODE TO DETECT A CYCLE: */
-  
+
 /*We can also solve it without storing the parent, A particular 
   node can be marked visited only by its parent so when we reach 
   a node and traverse all its adjacent node and find more than 
@@ -53,7 +53,7 @@ class Solution {
   we can simply say this particular node is also getting visited 
   from another direction and in that case we can say there is 
   cycle present. */
-//T.C: O(n) + O(2 * E);
+//T.C: O(n) + O(n + 2*E);
 //S.C: 2*O(n);
 class Solution {
   public:
