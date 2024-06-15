@@ -1,8 +1,8 @@
 //*****https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1*****
 
 
-//T.C: 3*O(n);
-//S.C: O(n) + O(2 * E);
+//T.C: O(n) + O(2 * E);
+//S.C: 3*O(n);
 class Solution {
   public:
     vector<int> bfsOfGraph(int V, vector<int> adj[]) {
