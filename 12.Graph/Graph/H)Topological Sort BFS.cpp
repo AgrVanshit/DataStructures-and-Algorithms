@@ -14,17 +14,17 @@
       topo array we get after this is our topological order.*/
 class Solution {
 public:
-	vector<int> topo(int N, vector<int> adj[]) {
+	vector<int> topoSort(int V, vector<int> adj[]) {
         queue<int> q; 
-        vector<int> indegree(N, 0); 
+        vector<int> indegree(V, 0); 
 
-	    for(int i = 0; i < N; i++) {
+	    for(int i = 0; i < V; i++) {
 	        for(auto it: adj[i]) {
 	            indegree[it]++; 
 	        }
 	    }
 	    
-	    for(int i = 0; i < N; i++) {
+	    for(int i = 0; i < V; i++) {
 	        if(indegree[i] == 0) {
 	            q.push(i); 
 	        }
