@@ -2,8 +2,8 @@
 
 
 //BFS Approach:
-//T.C: O(n*n);
-//S.C: 2*O(n*n);
+//T.C: O(n*m);
+//S.C: 2*O(n*m);
 class Solution {
     void bfs(int row, int col, vector<vector<char>>& grid, vector<vector<int>>& vis){
         int m = grid.size();
@@ -56,8 +56,8 @@ public:
 
 
 //DFS Approach:
-//T.C: O(n*n);
-//S.C: 2*O(n*n);
+//T.C: O(n*m);
+//S.C: 2*O(n*m);
 class Solution {
 public:
     void dfs(int row, int col, vector<vector<int>>& vis, vector<vector<char>>& grid){
