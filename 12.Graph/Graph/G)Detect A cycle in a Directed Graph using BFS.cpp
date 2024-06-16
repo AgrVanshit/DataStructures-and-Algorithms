@@ -3,35 +3,35 @@
 
 //T.C: O(n + E) + O(n) + O(n) + O(E);
 //S.C: 2*O(n);
-class Solution {
-public:
-	vector<int> topo(int N, vector<int> adj[]) {
+class Solution{
+  public:
+    bool isCyclic(int V, vector<int> adj[]){
         queue<int> q; 
-        vector<int> indegree(N, 0); 
+        vector<int> indegree(V, 0); 
 
-	    for(int i = 0; i < N; i++) {
-	        for(auto it: adj[i]) {
+	    for(int i = 0; i < V; i++){
+	        for(auto it: adj[i]){
 	            indegree[it]++; 
 	        }
 	    }
 	    
-	    for(int i = 0; i < N; i++) {
-	        if(indegree[i] == 0) {
+	    for(int i = 0; i < V; i++){
+	        if(indegree[i] == 0){
 	            q.push(i); 
 	        }
 	    }
         
         int cnt = 0;
 
-	    while(!q.empty()) {
+	    while(!q.empty()){
 	        int node = q.front(); 
 	        q.pop();
 
             cnt++;
 
-	        for(auto it : adj[node]) {
+	        for(auto it : adj[node]){
 	            indegree[it]--;
-	            if(indegree[it] == 0) {
+	            if(indegree[it] == 0){
 	                q.push(it); 
 	            }
 	        }
@@ -39,7 +39,7 @@ public:
 
         /*(cnt == N) means topo sort have all N nodes, means topo sort is 
           possible hence, graph is Directed and Acyclic. */
-	    if(cnt == N) return false;
+	    if(cnt == V) return false;
         return true;
-	}
+    }
 };
