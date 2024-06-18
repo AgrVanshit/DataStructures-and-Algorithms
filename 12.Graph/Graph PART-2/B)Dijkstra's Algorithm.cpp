@@ -145,3 +145,10 @@ twice). hence, maximum heap size boils down to "V', that is why  "log V".
 
 //Solve: PRINTING SHORTEST PATH USING DIJKSTRA'S ALGORITHM.
 //*****https://www.geeksforgeeks.org/problems/shortest-path-in-weighted-undirected-graph/1*****
+
+//https://leetcode.com/problems/shortest-path-in-binary-matrix/description/
+//https://leetcode.com/problems/path-with-minimum-effort/description/
+//https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
+//https://leetcode.com/problems/network-delay-time/description/
+//https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/
+//https://www.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1
