@@ -16,8 +16,8 @@
   Since, in a graph of n nodes, in worst case, you will take (n-1) edges
   to reach from the first to the last, thereby we iterate for (n-1) 
   iterations in Bellman Ford Algorithm. */
-  
-//T.C: O(E + V); // E -> Total no. of edges, V -> Total no. of nodes.
+
+//T.C: O(V * E); // E -> Total no. of edges, V -> Total no. of nodes.
 //S.C: O(V);
 class Solution{
 public:
