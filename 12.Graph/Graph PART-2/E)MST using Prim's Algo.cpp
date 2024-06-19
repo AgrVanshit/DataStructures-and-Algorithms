@@ -11,8 +11,7 @@ class Solution
 	public:
     int spanningTree(int V, vector<vector<int>> adj[])
     {
-        priority_queue<pair<int, int>,
-		               vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
 		vector<int> vis(V, 0);
 		
@@ -51,8 +50,7 @@ class Solution
 	public:
     vector<pair<int, int>> spanningTree(int V, vector<vector<int>> adj[])
     {
-        priority_queue<pair<int, pair<int, int>>,
-		               vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>> pq;
+        priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>> pq;
 
 		vector<int> vis(V, 0);
         vector<pair<int, int>> mst;
