@@ -6,7 +6,7 @@
 //S.C: O(V + E);
 class Solution
 {
-	public:
+public:
     vector <int> dijkstra(int V, vector<vector<int>> adj[], int S){
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
@@ -25,7 +25,6 @@ class Solution
                 int w = it[1];
                 if(dis + w < dist[v]){
                     dist[v] = dis + w;
-    
                     pq.push({dis + w, v}); //O(Heap size)
                 }
             }
@@ -39,7 +38,7 @@ class Solution
   CODE:
         class Solution
         {
-            public:
+        public:
             vector <int> dijkstra(int V, vector<vector<int>> adj[], int S){
                 queue<int> q;
 
@@ -82,9 +81,8 @@ Ans: If we use queue instead of priority queue then it is like a bruteforce wher
 //S.C: 2*O(V);
 class Solution
 {
-	public:
-    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
-    {
+public:
+    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S){
         set<pair<int,int>> st; 
 
         vector<int> dist(V, 1e9); 
@@ -104,7 +102,7 @@ class Solution
                 int edgW = it[1]; 
                 
                 if(dis + edgW < dist[adjNode]) {
-                    /**erase if it was visited previously at 
+                    /*erase if it was visited previously at 
                       a greater cost. It is done so that some 
                       extra iterations can be reduced. */
                     if(dist[adjNode] != 1e9) 
