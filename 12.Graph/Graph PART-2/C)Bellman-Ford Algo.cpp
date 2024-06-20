@@ -30,27 +30,27 @@ public:
 		dist[S] = 0;
 
 		for(int i = 0; i < V - 1; i++){
-			for(auto it : edges){
-				int u = it[0];
-				int v = it[1];
-				int wt = it[2];
-				if(dist[u] != 1e8 && dist[u] + wt < dist[v]){
-					dist[v] = dist[u] + wt;
-				}
-			}
-		}
-
-		// Vth iteration to check negative cycle.
-        /*Even after V-1 iterations the dist array is updated with any 
-          shorter dist in tne Vth iteration means negative cycle is 
-          present in the graph. */
-		for(auto it : edges){
+		    for(auto it : edges){
 			int u = it[0];
 			int v = it[1];
 			int wt = it[2];
 			if(dist[u] != 1e8 && dist[u] + wt < dist[v]){
-				return {-1};
+				dist[v] = dist[u] + wt;
 			}
+		    }
+		}
+
+		// Vth iteration to check negative cycle.
+                /*Even after V-1 iterations the dist array is updated with any 
+                shorter dist in tne Vth iteration means negative cycle is 
+                present in the graph. */
+		for(auto it : edges){
+		    int u = it[0];
+		    int v = it[1];
+		    int wt = it[2];
+		    if(dist[u] != 1e8 && dist[u] + wt < dist[v]){
+			return {-1};
+		    }
 		}
         
 		return dist;
