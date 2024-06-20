@@ -52,8 +52,8 @@ public:
         priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>> pq;
 
 		vector<int> vis(V, 0);
-			vector<pair<int, int>> mst;
-			// {parent, node}
+		vector<pair<int, int>> mst;
+		// {parent, node}
 			
 		// {wt, {node, parent}}
 		pq.push({0, {0, -1}});
