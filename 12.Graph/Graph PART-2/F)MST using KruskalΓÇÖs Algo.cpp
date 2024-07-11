@@ -93,3 +93,9 @@ public:
         return mstWt;
     }
 };
+
+
+//Disjoint set Application Problems:
+//https://leetcode.com/problems/number-of-provinces/description/
+//https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
+//https://leetcode.com/problems/accounts-merge/description/
