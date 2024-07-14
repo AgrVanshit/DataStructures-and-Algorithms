@@ -20,9 +20,7 @@ public:
     //     int r=climbStairs(n-2);
     //     return l+r;
     // }
-
-    //**DP**
-
+    
     int solve(int n, vector<int>& dp){
         if(n==0 || n==1){
             return 1;
