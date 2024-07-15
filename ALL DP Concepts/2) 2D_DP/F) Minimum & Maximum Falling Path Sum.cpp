@@ -7,7 +7,7 @@
 class Solution {
 public:
     int solve(int i, int j, int n, vector<vector<int>>& matrix, vector<vector<int>>& dp){
-        if(j < 0 || j  > n-1) return 1e9;
+        if(j < 0 || j > n-1) return 1e9;
         if(i == 0) return matrix[0][j];
 
         if(dp[i][j] != -1) return dp[i][j];
@@ -45,7 +45,7 @@ public:
         for(int j = 0; j < n; j++) dp[0][j] = matrix[0][j];
 
         for(int i = 1; i < n; i++){
-            for(int j = 0; j<n; j++){
+            for(int j = 0; j < n; j++){
                 int s = matrix[i][j] + dp[i-1][j];
 
                 int ld = matrix[i][j]; 
@@ -56,7 +56,7 @@ public:
                 if(j+1 < n) rd += dp[i-1][j+1];
                 else rd += 1e9;
 
-                dp[i][j] = min(s,min(ld,rd));
+                dp[i][j] = min(s, min(ld,rd));
             }
         }
 
