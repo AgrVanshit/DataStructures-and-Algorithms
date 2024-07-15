@@ -1,7 +1,7 @@
 //*****https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1*****
 
 
-//T.C: O(n * sum) + O(n);
+//T.C: O(n * sum) + O(n) + O(totsum/2);
 //S.C: O(sum);
 class Solution{
 public:
