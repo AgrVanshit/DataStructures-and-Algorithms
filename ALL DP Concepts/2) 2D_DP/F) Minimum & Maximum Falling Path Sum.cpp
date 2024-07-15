@@ -82,21 +82,21 @@ public:
 
         vector<int> prev(n,0), cur(n,0);
 
-        for(int j = 0; j<n; j++) prev[j] = matrix[0][j];
+        for(int j = 0; j < n; j++) prev[j] = matrix[0][j];
 
-        for(int i = 1; i<n; i++){
-            for(int j = 0; j<n; j++){
+        for(int i = 1; i < n; i++){
+            for(int j = 0; j < n; j++){
                 int s = matrix[i][j] + prev[j];
 
                 int ld = matrix[i][j]; 
-                if(j>0) ld += prev[j-1];
+                if(j > 0) ld += prev[j-1];
                 else ld += 1e9;
 
                 int rd = matrix[i][j];
-                if(j+1<n) rd += prev[j+1];
+                if(j+1 < n) rd += prev[j+1];
                 else rd += 1e9;
 
-                cur[j] = min(s,min(ld,rd));
+                cur[j] = min(s, min(ld,rd));
             }
 
             prev = cur;
@@ -104,10 +104,10 @@ public:
 
         int mini = prev[0];
 
-        for(int j=1; j<n; j++){
+        for(int j = 1; j < n; j++){
             mini = min(mini, prev[j]);
         }
-        
+
         return mini;
     }
 };
