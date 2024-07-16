@@ -13,21 +13,21 @@ public:
 	    int sum = totsum;
 	    
 	    vector<bool>prev(sum+1, 0), cur(sum+1, 0);
-        prev[0] = 1;
-        cur[0] = 1;
-        
-        if(arr[0] <= sum) prev[arr[0]] = 1;
-        
-        for(int ind = 1; ind < n; ind++){
-            for(int curr = 1; curr <= sum; curr++){
-                bool pick = false;
-                if(curr >= arr[ind]) pick = prev[curr - arr[ind]];
-                bool npick = prev[curr];
-                
-                cur[curr] = (pick | npick);
-            }
-            prev = cur;
-        }
+	    prev[0] = 1;
+	    cur[0] = 1;
+	
+	    if(arr[0] <= sum) prev[arr[0]] = 1;
+	
+	    for(int ind = 1; ind < n; ind++){
+	        for(int curr = 1; curr <= sum; curr++){
+		    bool pick = false;
+		    if(curr >= arr[ind]) pick = prev[curr - arr[ind]];
+		    bool npick = prev[curr];
+		
+		    cur[curr] = (pick | npick);
+	        }
+	        prev = cur;
+	    }
         
 	    int mini = 1e9;
 	    for(int s = 0; s <= totsum/2; s++){
