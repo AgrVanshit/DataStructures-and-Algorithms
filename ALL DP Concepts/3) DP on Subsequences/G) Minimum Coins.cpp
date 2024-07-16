@@ -54,6 +54,7 @@ public:
                 dp[ind][T] = min(take, nottake);
             }
         }
+        
         if(dp[n-1][amount] >= 1e9) return -1;
         return dp[n-1][amount];
     }
