@@ -14,6 +14,8 @@ public:
 
     for(int j = 0; j <= m; j++) dp[0][j] = 0;
     for(int i = 0; i <= n; i++) dp[i][0] = 0;
+    /*No need of above 2 loops, we can just declare all elements of 
+      dp as 0 and hence remove above two loops*/
 
     for(int i = 1; i <= n; i++){
         for(int j = 1; j <= m; j++){
