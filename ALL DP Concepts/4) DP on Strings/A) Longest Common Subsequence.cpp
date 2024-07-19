@@ -10,7 +10,7 @@ public:
         if(i<0 || j<0) return 0;
 
         if(dp[i][j] != -1) return dp[i][j];
-        
+
         if(text1[i] == text2[j]) return dp[i][j] = 1 + solve(i-1, j-1, text1, text2, dp);
         return dp[i][j] = max(solve(i-1, j, text1, text2, dp), solve(i, j-1, text1, text2, dp));
     }
@@ -37,6 +37,8 @@ public:
 
         for(int j = 0; j<=m; j++) dp[0][j] = 0;
         for(int i = 0; i<=n; i++) dp[i][0] = 0;
+        /*No need of above 2 loops, we can just declare all elements of 
+        dp as 0 and hence remove above two loops*/
 
         for(int i = 1; i<=n; i++){
             for(int j = 1; j<=m; j++){
