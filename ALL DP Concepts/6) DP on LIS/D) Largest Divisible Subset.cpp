@@ -1,6 +1,8 @@
 //*****https://leetcode.com/problems/largest-divisible-subset/description/*****
 
 
+//T.C: O(n * n) + O(n);
+//S.C: O(2 * n);
 class Solution {
 private:
     vector<int> lengthOfLDivisibleIS(vector<int>& nums) {
