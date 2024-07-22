@@ -1,7 +1,7 @@
 //*****https://www.geeksforgeeks.org/problems/printing-longest-increasing-subsequence/1*****
 
 
-//T.C: O(n * n) + O(LIS length);
+//T.C: O(n * n) + O(n);
 //S.C: O(2 * n);
 class Solution {
   public:
