@@ -4,8 +4,6 @@
 //****Tabulation****
 //T.C: O(n * n * n);
 //S.C: O(n * n);
-
-
 class Solution{
 public:
     int matrixMultiplication(int N, int arr[])
