@@ -6,7 +6,7 @@
 
 //APPROACH: 1
 //T.C: O(n! * n);
-//S.C: O(n) + O(n);
+//S.C: O(n!) + O(3*n);// n! for "ans" array, 2*n for "freq" and "ds" arrays, and n for recursive stack space.
 class Solution {
 public:
     void solve(int n, vector<int>& nums, vector<int>& ds, vector<int>& freq, vector<vector<int>>& ans){
