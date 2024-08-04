@@ -49,6 +49,7 @@ public:
 
         if(ind == n){
             ans.push_back(nums);
+            return;
         }
 
         for(int i = ind; i < n; i++){
