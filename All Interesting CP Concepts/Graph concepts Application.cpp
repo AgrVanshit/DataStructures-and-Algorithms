@@ -6,6 +6,6 @@ DJIKSTRA'S ALGORITHM:
 
 
 /*
-DFS + BINARY SEARCH:
+  DFS:
 //https://codeforces.com/contest/1997/problem/D
 */
