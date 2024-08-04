@@ -39,6 +39,7 @@ public:
 
 
 //APPROACH: 2
+//SWAPPING TECHNIQUE:
 //T.C: O(n! * n);
 //S.C: O(n!) + O(n);
 class Solution {
