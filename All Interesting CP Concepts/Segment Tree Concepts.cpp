@@ -1,7 +1,7 @@
 //*******************************SEGMENT TREE*************************************
 
 
-//RANGE SUM QUERY:
+//➡️RANGE SUM QUERY:
 //https://www.geeksforgeeks.org/problems/sum-of-query-ii5310/1
 //T.C : O(q * log(n));
 //S.C : O(4 * n);
@@ -53,7 +53,7 @@ public:
 };
 
 
-//RANGE MINIMUM QUERY:
+//➡️RANGE MINIMUM QUERY:
 //https://www.geeksforgeeks.org/problems/range-minimum-query/1
 //T.C : O(q * log(n));
 //S.C : O(4 * n);
@@ -98,7 +98,7 @@ int RMQ(int st[] , int n, int a, int b){
 }
 
 
-//RANGE UPDATE:
+//➡️RANGE UPDATE:
 //LAZY PROPAGATION:
 //T.C : O(q * log(n));
 //S.C : O(4 * n) + O(4 * n);
@@ -143,5 +143,5 @@ void updateRange(int start, int end, int i, int l, int r, int val) {
 
 
 
-//PRACTICE QUESTIONS:
+//➡️PRACTICE QUESTIONS:
 //https://leetcode.com/problems/range-sum-query-mutable/description/
