@@ -26,16 +26,17 @@ public:
 			if(vis[node] == 1) continue;
 		
 			// add it to the sum
-				vis[node] = 1;
+			vis[node] = 1;
 			sum += wt;
 			for(auto it : adj[node]){
 				int adjNode = it[0];
 				int edW = it[1];
-					if(!vis[adjNode]){
-				pq.push({edW, adjNode});
+				if(!vis[adjNode]){
+					pq.push({edW, adjNode});
 				}
 			}
 		}
+
 		return sum;
     }
 };
