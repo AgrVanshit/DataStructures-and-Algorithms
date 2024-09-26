@@ -8,16 +8,16 @@ class Solution{
 public:
 	int mod = (int)1e9 + 7;
 	int solve(int i, int arr[], int currsum, vector<vector<int>>& dp){
-        if(i==0){
-          if(currsum==0 && arr[0]==0) return 2;
-          if(currsum==0 || arr[0]==currsum) return 1;
-          else return 0;
-        }	   
-        /* if(currsum == 0) return 1;//can't add this case because arrays has zero
-          also we are missing additional subsets that can be made by addind zeroes 
-          in the already made subset with the target sum....*/
-        
-        if(dp[i][currsum] != -1) return dp[i][currsum] % mod;
+      if(i==0){
+        if(currsum==0 && arr[0]==0) return 2;
+        if(currsum==0 || arr[0]==currsum) return 1;
+        else return 0;
+      }	   
+      /* if(currsum == 0) return 1;//can't add this case because arrays has zero
+        also we are missing additional subsets that can be made by addind zeroes 
+        in the already made subset with the target sum....*/
+      
+      if(dp[i][currsum] != -1) return dp[i][currsum] % mod;
         
 	    int pick = 0;
 	    if(currsum >= arr[i]) pick = solve(i-1, arr, currsum - arr[i], dp) % mod;
